@@ -5,12 +5,12 @@ Code to run an experiment with LLMs for negotiation in Empirica.
 1. Clone the repo, then run `npm install` within the main directory and each of the `client` and `server` directories. 
 2. Add a `.env.local` file to the `client` directory containing the following:.
 ```
-VITE_CHAT_API_PORT="5000"
+VITE_CHAT_API_PORT="5002"
 ```
 3. Add a `.env` file to the `server` directory containing the following and replacing `<YOUR_OPENAI_KEY>` with your OpenAI API key:
 ```
 OPENAI_API_KEY="<YOUR_OPENAI_KEY>"
-CHAT_API_PORT="5000"
+CHAT_API_PORT="5002"
 ```
 4. From the main directory, run the command `empirica`. 
 5. Go to `http://localhost:3000/admin` in your browser to access the admin console, create a treatment from the factors already defined, and create a batch to negotiate with an LLM. 
