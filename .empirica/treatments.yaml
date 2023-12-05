@@ -1,0 +1,131 @@
+factors:
+    - name: playerCount
+      desc: playerCount determines the number of Players are in a Game. playercount= 1 is player vs. LLM, playercount= 2 is player vs. player
+      values:
+        - value: 1
+        - value: 2
+    - name: llmTemperature
+      desc: This sets, how much the LLM varies in its dialogue (i.e., the temperature of the LLM)
+      values:
+        - value: 0
+        - value: 0.2
+    - name: llmDemeanor
+      desc: This sets the LLM's demeanor, which affects the LLM's dialogue.
+      values:
+        - value: 'Your personality in this negotiation is defined by how warm or cold-hearted you are, and how dominant or submissive you are. How much warmth you have is scored from 0 (maximum cold-hearted) to 100 (maximum warmth). How much dominance you have is scored from 0 (maximum submissive) to 100 (maximum dominant). Your personality is defined as follows: Warmth: 90 Dominance: 10 '
+        - value: 'Your personality in this negotiation is defined by how warm or cold-hearted you are, and how dominant or submissive you are. How much warmth you have is scored from 0 (maximum cold-hearted) to 100 (maximum warmth). How much dominance you have is scored from 0 (maximum submissive) to 100 (maximum dominant). Your personality is defined as follows: Warmth: 10 Dominance: 90'
+        - value: 'Your personality in this negotiation is defined by how warm or cold-hearted you are, and how dominant or submissive you are. How much warmth you have is scored from 0 (maximum cold-hearted) to 100 (maximum warmth). How much dominance you have is scored from 0 (maximum submissive) to 100 (maximum dominant). Your personality is defined as follows: Warmth: 50 Dominance: 50'
+        - value: 'Your personality in this negotiation is defined by how warm or cold-hearted you are, and how dominant or submissive you are. How much warmth you have is scored from 0 (maximum cold-hearted) to 100 (maximum warmth). How much dominance you have is scored from 0 (maximum submissive) to 100 (maximum dominant). Your personality is defined as follows: Warmth: 90 Dominance: 90'
+        - value: 'Your personality in this negotiation is defined by how warm or cold-hearted you are, and how dominant or submissive you are. How much warmth you have is scored from 0 (maximum cold-hearted) to 100 (maximum warmth). How much dominance you have is scored from 0 (maximum submissive) to 100 (maximum dominant. Your personality is defined as follows: Warmth: 10 Dominance: 10'
+    - name: llmStartsFirst
+      desc: Whether the LLM is programmed to speak prior to the human player's initial message
+      values:
+        - value: true
+        - value: false
+    - name: llmPromptRole
+      desc: If the LLM priming will be delivered as a system prompt, or a user prompt. See OpenAI docs -- as of gpt-turbo-3.5-0301, it's recommended to use "user" roles for the primes, and this seems to work from initial testing.
+      values:
+        - value: user
+        - value: system
+    - name: firstPlayerInstructions
+      desc: Whether the first player (i.e., the first person programmed to speak, see llmStartsfirst) in the game is programmed to be the COO or the Consultant
+      values:
+        - value: coo
+        - value: consultant
+    - name: secondPlayerInstructions
+      desc: Whether the second player in the game is programmed to be the COO or the Consultant
+      values:
+        - value: coo
+        - value: consultant
+    - name: firstPlayerNoDeal
+      desc: Should the first player be allowed to end the game without a deal?
+      values:
+        - value: allowed-mutual
+        - value: allowed-unilateral
+        - value: not-allowed
+    - name: secondPlayerNoDeal
+      desc: Should the second player be allowed to end the game without a deal?
+      values:
+        - value: allowed-mutual
+        - value: allowed-unilateral
+        - value: not-allowed
+    - name: allowOutOfOrder
+      desc: Should players be allowed to send messages out of order?
+      values:
+        - value: true
+        - value: false
+    - name: firstPlayerStatedOpponent
+      desc: Whether the first player is told they are playing against a human or an AI.
+      values:
+        - value: ai
+        - value: human
+    - name: secondPlayerStatedOpponent
+      desc: Whether the second player is told they are playing against a human or an AI.
+      values:
+        - value: ai
+        - value: human
+treatments:
+    - name: Player vs. Player Condition
+      desc: This is the condition for Player vs. Player
+      factors:
+        allowOutOfOrder: true
+        firstPlayerInstructions: coo
+        firstPlayerNoDeal: allowed-mutual
+        firstPlayerStatedOpponent: human
+        playerCount: 2
+        secondPlayerInstructions: consultant
+        secondPlayerNoDeal: allowed-mutual
+        secondPlayerStatedOpponent: human
+    - name: Player (COO) vs. LLM
+      desc: This is the condition where the player is the COO vs. LLM.
+      factors:
+        allowOutOfOrder: true
+        firstPlayerInstructions: consultant
+        firstPlayerNoDeal: allowed-mutual
+        firstPlayerStatedOpponent: ai
+        llmPromptRole: system
+        llmStartsFirst: true
+        llmTemperature: 0.2
+        playerCount: 1
+        secondPlayerInstructions: coo
+        secondPlayerNoDeal: allowed-mutual
+        secondPlayerStatedOpponent: ai
+    - name: Player (Consultant) vs. LLM
+      desc: This is the condition where the player is the Consultant vs. LLM.
+      factors:
+        allowOutOfOrder: true
+        firstPlayerInstructions: coo
+        firstPlayerNoDeal: allowed-mutual
+        firstPlayerStatedOpponent: ai
+        llmPromptRole: system
+        llmStartsFirst: true
+        llmTemperature: 0.2
+        playerCount: 1
+        secondPlayerInstructions: consultant
+        secondPlayerNoDeal: allowed-mutual
+        secondPlayerStatedOpponent: ai
+    - name: Test_2
+      factors:
+        allowOutOfOrder: true
+        firstPlayerInstructions: coo
+        firstPlayerNoDeal: allowed-unilateral
+        llmPromptRole: system
+        llmStartsFirst: true
+        llmTemperature: 0.2
+        playerCount: 1
+        secondPlayerInstructions: consultant
+        secondPlayerNoDeal: allowed-unilateral
+        secondPlayerStatedOpponent: ai
+    - name: Test_3
+      factors:
+        allowOutOfOrder: true
+        firstPlayerInstructions: coo
+        firstPlayerNoDeal: allowed-unilateral
+        llmDemeanor: 'Your personality in this negotiation is defined by how warm or cold-hearted you are, and how dominant or submissive you are. How much warmth you have is scored from 0 (maximum cold-hearted) to 100 (maximum warmth). How much dominance you have is scored from 0 (maximum submissive) to 100 (maximum dominant). Your personality is defined as follows: Warmth: 10 Dominance: 90'
+        llmPromptRole: system
+        llmStartsFirst: true
+        llmTemperature: 0.2
+        playerCount: 1
+        secondPlayerInstructions: consultant
+        secondPlayerNoDeal: allowed-unilateral
+        secondPlayerStatedOpponent: ai
