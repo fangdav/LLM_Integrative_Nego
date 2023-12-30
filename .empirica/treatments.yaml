@@ -101,3 +101,31 @@ treatments:
         secondPlayerInstructions: coo
         secondPlayerNoDeal: allowed-unilateral
         secondPlayerStatedOpponent: ai
+    - name: LLM COO (90% Warmth, 10% Dominance)
+      factors:
+        allowOutOfOrder: true
+        firstPlayerInstructions: coo
+        firstPlayerNoDeal: allowed-unilateral
+        firstPlayerStatedOpponent: ai
+        llmDemeanor: 'Your personality in this negotiation is defined by how warm or cold-hearted you are, and how dominant or submissive you are. How much warmth you have is scored from 0 (maximum cold-hearted) to 100 (maximum warmth). How much dominance you have is scored from 0 (maximum submissive) to 100 (maximum dominant). Your personality is defined as follows: Warmth: 90 Dominance: 10 '
+        llmPromptRole: system
+        llmStartsFirst: true
+        llmTemperature: 0.2
+        playerCount: 1
+        secondPlayerInstructions: consultant
+        secondPlayerNoDeal: allowed-unilateral
+        secondPlayerStatedOpponent: ai
+    - name: LLM Consultant (10% Warmth, 90% Dominance)
+      factors:
+        allowOutOfOrder: true
+        firstPlayerInstructions: consultant
+        firstPlayerNoDeal: allowed-unilateral
+        firstPlayerStatedOpponent: ai
+        llmDemeanor: 'Your personality in this negotiation is defined by how warm or cold-hearted you are, and how dominant or submissive you are. How much warmth you have is scored from 0 (maximum cold-hearted) to 100 (maximum warmth). How much dominance you have is scored from 0 (maximum submissive) to 100 (maximum dominant). Your personality is defined as follows: Warmth: 10 Dominance: 90'
+        llmPromptRole: system
+        llmStartsFirst: true
+        llmTemperature: 0.2
+        playerCount: 1
+        secondPlayerInstructions: coo
+        secondPlayerNoDeal: allowed-unilateral
+        secondPlayerStatedOpponent: ai
