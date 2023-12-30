@@ -39,7 +39,7 @@ export function PartnerRatingSurvey({ next }) {
   return (
     <div className="mx-auto mt-3 w-full max-w-screen-md p-20 sm:mt-5">
       <h3 className="text-lg font-medium leading-6 text-gray-900">
-        Partner rating
+        Counterpart rating
       </h3>
       <p className="mt-2 text-gray-500">
         Recollecting the negotiation you just had, please answer the following

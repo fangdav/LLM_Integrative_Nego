@@ -43,7 +43,7 @@ export function Introduction({next}) {
           In this task, you will be asked to participate in a{" "}
           <strong>negotiation</strong> with another party. You will have a greater chance of receieving a {" "}
           <strong>$10 bonus compensation</strong> based on{" "}
-          <strong>how well you do </strong> on the negotiation (ie., the number of points you earn in your negotiation) 
+          <strong>how well you do </strong> in the negotiation (i.e., the number of points you earn in your negotiation) 
           relative to other participants.
         </p>
 
@@ -53,8 +53,7 @@ export function Introduction({next}) {
           <strong>reject</strong>, as well as <strong>walk away</strong> from
           the negotiation (i.e., end the negotiation). The{" "}
           <strong>same features</strong> are given to the{" "}
-          <strong>other party</strong>. The other party is able to send you
-          offers or walk away from the negotiation. At any time, if either you or the other party 
+          <strong>other party</strong>. At any time, if either you or the other party 
           walks away from the negotiation, the negotiation will end without reaching a deal.
         </p>
 

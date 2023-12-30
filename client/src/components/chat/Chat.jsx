@@ -102,7 +102,7 @@ function getPlaceholder({
   } else if (waitingOnNoDeal) {
     return "Continue or end it?";
   } else if (waitingOnOtherPlayer) {
-    return "Waiting for Opponent...";
+    return "Waiting for Counterpart...";
   }
 
   return "Negotiate...";

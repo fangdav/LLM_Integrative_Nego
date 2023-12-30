@@ -53,10 +53,10 @@ export function Demographic({ next }) {
               <h3 className="text-lg font-medium leading-6 text-gray-900">
                 Demographic Survey
               </h3>
-              <p>Thank you for reaching the final page of the exit survey.</p>
+              <p>Thank you for reaching the final page of the survey.</p>
               <p className="mt-1 text-sm text-gray-500">
                 Please finish the following short demographic survey. You do not
-                have to provide any information you feel uncomfortable with.
+                have to provide any information you feel uncomfortable sharing.
               </p>
             </div>
 

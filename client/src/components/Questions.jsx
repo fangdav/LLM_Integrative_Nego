@@ -7,6 +7,7 @@ import { Button } from "../components/Button";
 export function Questions({
   questions,
   onDone,
+  onUpdateCurrentGroup, // New prop
   playerKey,
   withLabelKey = false,
   groupSize = 1,
@@ -27,6 +28,9 @@ export function Questions({
 
   const handleNextGroup = () => {
     setCurrentGroup(currentGroup + 1);
+    if (onUpdateCurrentGroup) {
+      onUpdateCurrentGroup(currentGroup + 1); // Update the parent component
+    }
     if (currentGroup === Math.floor(questions.length / groupSize) - 1) {
       onDone();
     }

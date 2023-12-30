@@ -9,7 +9,7 @@ export function Consent({ onConsent }) {
     if (consent === "yes") {
       onConsent();
     } else {
-      window.location.href = "https://www.stanford.edu/";
+      window.location.href = "https://www.prolific.com/";
     }
   };
 

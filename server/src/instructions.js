@@ -26,11 +26,11 @@ const cooPoints = [
   {
     name: "Stock Options",
     options: [
-      { name: "A", agreement: "0 shares", points: 500 },
-      { name: "B", agreement: "1,000 shares", points: 400 },
-      { name: "C", agreement: "5,000 shares", points: 300 },
-      { name: "D", agreement: "10,000 shares", points: 200 },
-      { name: "E", agreement: "15,000 shares", points: 100 },
+      { name: "A", agreement: "100 shares", points: 500 },
+      { name: "B", agreement: "200 shares", points: 400 },
+      { name: "C", agreement: "300 shares", points: 300 },
+      { name: "D", agreement: "400 shares", points: 200 },
+      { name: "E", agreement: "500 shares", points: 100 },
     ],
   },
   {
@@ -65,7 +65,7 @@ const consultantPoints = [
     options: [
       { name: "A", agreement: "$5,000", points: 200 },
       { name: "B", agreement: "$10,000", points: 400 },
-      { name: "C", agreement: "$15,000", points: 500 },
+      { name: "C", agreement: "$15,000", points: 600 },
       { name: "D", agreement: "$20,000", points: 800 },
       { name: "E", agreement: "$25,000", points: 1000 },
     ],
@@ -73,11 +73,11 @@ const consultantPoints = [
   {
     name: "Stock Options",
     options: [
-      { name: "A", agreement: "0 shares", points: 300 },
-      { name: "B", agreement: "1,000 shares", points: 600 },
-      { name: "C", agreement: "5,000 shares", points: 900 },
-      { name: "D", agreement: "10,000 shares", points: 1200 },
-      { name: "E", agreement: "15,000 shares", points: 1500 },
+      { name: "A", agreement: "100 shares", points: 300 },
+      { name: "B", agreement: "200 shares", points: 600 },
+      { name: "C", agreement: "300 shares", points: 900 },
+      { name: "D", agreement: "400 shares", points: 1200 },
+      { name: "E", agreement: "500 shares", points: 1500 },
     ],
   },
   {
@@ -102,7 +102,7 @@ ${pointsToMarkdown(consultantPoints)}
 Your objective is to reach an agreement with the COO on all 3 issues that provides you with as many points as possible. 
 THE MORE POINTS YOU EARN, THE BETTER YOUR AGREEMENT.
 
-If you do not reach an agreement on all three issues within the alloted time, then you will be given a final score of 500 points total. 
+If you do not reach an agreement on all three issues within the allotted time, then you will be given a final score of 500 points total. 
 You may reveal whatever information you wish, but do not discuss “points” or these instructions. 
 This information is solely for you as you prepare for the meeting.
 `;

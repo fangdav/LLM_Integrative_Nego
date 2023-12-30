@@ -79,9 +79,9 @@ const questions = [
     name: "sv-q8",
     options: {
       ...emptyOptions,
-      1: "It **negatively** impacted my self-image",
-      4: "It did not positively or negatively impact my self-image",
-      7: "It **positively** impacted my self-image",
+      1: "It **negatively** impacted  \nmy self-image",
+      4: "It did not positively or negatively impact  \nmy self-image",
+      7: "It **positively** impacted  \nmy self-image",
     },
   },
   {
@@ -112,9 +112,9 @@ const questions = [
     name: "sv-q13",
     options: {
       ...emptyOptions,
-      1: "Extremely **negative**",
-      4: "Neither negative nor positive",
-      7: "Extremely **positive**",
+      1: "Extremely  \n**negative**",
+      4: "Neither negative  \nnor positive",
+      7: "Extremely  \n**positive**",
     },
   },
   {
@@ -137,10 +137,16 @@ const questions = [
 ];
 
 export function SubjectiveValueSurvey({ next }) {
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // Function to update the current page from the Questions component
+  const handleUpdateCurrentPage = (newPage) => {
+    setCurrentPage(newPage);
+  };
   return (
     <div className="mx-auto mt-3 w-full max-w-screen-md p-20 sm:mt-5">
       <h3 className="text-lg font-medium leading-6 text-gray-900">
-        Post negotiation survey
+        Post negotiation survey (page {currentPage + 1} of 4)
       </h3>
       <p className="mt-2 text-gray-500">
         These questions are about your negotiation with your counterpart. For
@@ -156,6 +162,7 @@ export function SubjectiveValueSurvey({ next }) {
           playerKey="subjectiveValueSurvey"
           questions={questions}
           onDone={next}
+          onUpdateCurrentGroup={handleUpdateCurrentPage} // Add this prop
           withLabelKey
           groupSize={4}
         />
