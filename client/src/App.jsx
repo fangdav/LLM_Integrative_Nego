@@ -8,6 +8,7 @@ import { Consent } from "./intro-exit/Consent";
 import { Result } from "./intro-exit/Result";
 import { PartnerRatingSurvey } from "./intro-exit/PartnerRating";
 import { Strategy } from "./intro-exit/Strategy";
+import { MediatorSurvey } from "./intro-exit/Mediator";
 //import { HumannessQuestion } from "./intro-exit/HumannessQuestion";
 import { Demographic } from "./intro-exit/Demographic";
 import { Introduction } from "./intro-exit/Introduction";
@@ -30,6 +31,7 @@ export default function App() {
       Result,
       SubjectiveValueSurvey,
       PartnerRatingSurvey,
+      MediatorSurvey,
       Strategy,
       //HumannessQuestion,
       Demographic,
