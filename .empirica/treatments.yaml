@@ -75,16 +75,6 @@ treatments:
         secondPlayerInstructions: consultant
         secondPlayerNoDeal: allowed-unilateral
         secondPlayerStatedOpponent: human
-    - name: Player vs Player (Wizard of Oz)
-      factors:
-        allowOutOfOrder: true
-        firstPlayerInstructions: coo
-        firstPlayerNoDeal: allowed-unilateral
-        firstPlayerStatedOpponent: ai
-        playerCount: 2
-        secondPlayerInstructions: consultant
-        secondPlayerNoDeal: allowed-unilateral
-        secondPlayerStatedOpponent: ai
     - name: AI COO vs. Human Consultant (90% Warmth, 10% Dominance)
       factors:
         allowOutOfOrder: true
@@ -248,6 +238,26 @@ treatments:
         llmStartsFirst: true
         llmTemperature: 0.2
         playerCount: 1
+        secondPlayerInstructions: consultant
+        secondPlayerNoDeal: allowed-unilateral
+        secondPlayerStatedOpponent: ai
+    - name: Player vs Player (COO Wizard of Oz)
+      factors:
+        allowOutOfOrder: true
+        firstPlayerInstructions: coo
+        firstPlayerNoDeal: allowed-unilateral
+        firstPlayerStatedOpponent: ai
+        playerCount: 2
+        secondPlayerInstructions: consultant
+        secondPlayerNoDeal: allowed-unilateral
+        secondPlayerStatedOpponent: human
+    - name: Player vs Player (Consultant Wizard of Oz)
+      factors:
+        allowOutOfOrder: true
+        firstPlayerInstructions: coo
+        firstPlayerNoDeal: allowed-unilateral
+        firstPlayerStatedOpponent: human
+        playerCount: 2
         secondPlayerInstructions: consultant
         secondPlayerNoDeal: allowed-unilateral
         secondPlayerStatedOpponent: ai
