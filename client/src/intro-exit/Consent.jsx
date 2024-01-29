@@ -27,8 +27,8 @@ export function Consent({ onConsent }) {
           reported in scholarly journals, at academic seminars, and at research
           association meetings. The data will be stored at a secured location
           and retained indefinitely. My participation is voluntary. I am free to
-          withdraw from the study at any time. Should you have questions, please
-          contact us at fangdav2@gmail.com.
+          withdraw from the study at any time. Should any questions arise, please
+          contact fangdav2@gmail.com.
         </p>
       </div>
       <div className="mt-6">
