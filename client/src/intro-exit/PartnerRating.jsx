@@ -14,22 +14,38 @@ const defaultOptions = {
 
 const questions = [
   {
-    question: <>How <strong>assertive</strong> was your counterpart?</>,
+    question: (
+      <div style={{ marginTop: '30px' }}> {/* Add bottom margin */}
+        How <strong>assertive</strong> was your counterpart?
+      </div>
+    ),
     name: "pr-q1",
     options: defaultOptions,
   },
   {
-    question: <>How much <strong>empathy</strong> did your counterpart convey?</>,
+    question: (
+      <div style={{ marginTop: '30px' }}> {/* Add bottom margin */}
+        How much <strong>empathy</strong> did your counterpart convey?
+      </div>
+    ),
     name: "pr-q2",
     options: defaultOptions,
   },
   {
-    question: <>How <strong>warm</strong> was your counterpart?</>,
+    question: (
+      <div style={{ marginTop: '30px' }}> {/* Add bottom margin */}
+        How <strong>warm</strong> was your counterpart?
+      </div>
+    ),
     name: "pr-q3",
     options: defaultOptions,
   },
   {
-    question: <>How <strong>dominant</strong> was your counterpart?</>,
+    question: (
+      <div style={{ marginTop: '30px' }}> {/* Add bottom margin */}
+        How <strong>dominant</strong> was your counterpart?
+      </div>
+    ),
     name: "pr-q4",
     options: defaultOptions,
   },
