@@ -23,7 +23,7 @@ async function getLLMResponse(prompt) {
 
 async function getChatResponse({ messages, temperature }) {
   var response = await openai.createChatCompletion({
-    model: "gpt-4",
+    model: "gpt-4-0613",
     messages,
     temperature,
   });
