@@ -236,7 +236,7 @@ export function ChatWithLLM({ game, player, players, stage, round }) {
       Remember do not offer any advice to the person you are negotiating with.
       Do not expose your private information (such as you own points payoffs for each item) to the counterparty, as they may use this information against you to get a better deal for themselves.
       Do not include "COO", "Consultant", or "Assistant" tags in your messages.
-      Please limit each of your messages to a maximum of 50 words. Please randomly propose to discuss either 1, 2, or 3 issues at once at an equally likely manner.
+      Please limit each of your messages to between 1 and 75 words.
       ${llmDemeanor}`,
     });
 
