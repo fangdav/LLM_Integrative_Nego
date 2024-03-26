@@ -237,6 +237,7 @@ export function ChatWithLLM({ game, player, players, stage, round }) {
       Do not expose your private information (such as you own points payoffs for each item) to the counterparty, as they may use this information against you to get a better deal for themselves.
       Do not include "COO", "Consultant", or "Assistant" tags in your messages.
       Please limit each of your messages to between 1 and 75 words.
+      When negotiating the Lump Sum Fee, Stock Options and Administrative Support, please only negotiate within the five options provided. If the user proposes an agreement that is not one of the five options, you should respond with a message requesting that they choose one of the five options.
       ${llmDemeanor}`,
     });
 
